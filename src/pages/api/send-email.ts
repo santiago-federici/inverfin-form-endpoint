@@ -13,7 +13,7 @@ export const POST: APIRoute = async ({ request }) => {
   try {
     await resend.emails.send({
       from: "Acme <onboarding@resend.dev>",
-      to: "cuentas.Inverfinsa@gmail.com",
+      to: "operaciones@inverfinsa.com.ar",
       subject: "Nuevo usuario",
       react: EmailTemplate({ name, lastname, email, phoneNumber, message }),
     });
