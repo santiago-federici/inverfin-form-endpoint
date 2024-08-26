@@ -43,3 +43,13 @@ export const POST: APIRoute = async ({ request }) => {
     );
   }
 };
+
+export const OPTIONS: APIRoute = async () => {
+  return new Response(null, {
+    headers: {
+      "Access-Control-Allow-Origin": "*", // Permite cualquier origen
+      "Access-Control-Allow-Methods": "POST, OPTIONS", // Métodos permitidos
+      "Access-Control-Allow-Headers": "Content-Type", // Encabezados permitidos
+    },
+  });
+};
