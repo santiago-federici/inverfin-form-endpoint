@@ -21,7 +21,13 @@ export const POST: APIRoute = async ({ request }) => {
     return new Response(
       JSON.stringify({
         message: "success",
-      })
+      }),
+      {
+        headers: {
+          "Access-Control-Allow-Origin": "*",
+          "Content-Type": "application/json",
+        },
+      }
     );
   } catch (error) {
     return new Response(
